@@ -1,5 +1,5 @@
 # Import Scraper class and dependencies
-from ots import *
+from lib.ots import *
 
 # Create QuotesScraper class inherited from Scraper class
 class QuotesScraper(Scraper):
@@ -38,12 +38,12 @@ quotes = QuotesScraper()
 quotes.run()
 
 # Pretty print results to console
-quotes.print_table()
+quotes.print_results()
 
 # Export extracted data to CSV file
-quotes.export_csv('quotes.csv', ['quote', 'author'])
+quotes.export_csv('./data/quotes.csv')
 
 # Export extracted data to JSON file
-quotes.export_json('quotes.json')
+quotes.export_json('./data/quotes.json')
 
 

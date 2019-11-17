@@ -48,7 +48,7 @@ class Scraper:
         pass
     
     # Pretty print results to console
-    def print_table(self):
+    def print_results(self):
         # Make sure results available
         if len(self.results):
             # Results in dictionary format case
@@ -59,7 +59,7 @@ class Scraper:
                 print(tabulate(self.results, tablefmt='fancy_grid'))
     
     # Export results as CSV file
-    def export_csv(self, filename, headers):
+    def export_csv(self, filename):
         # Create file stream
         with open(filename, 'w', newline='') as csv_file:
             # Make sure results available
@@ -67,7 +67,7 @@ class Scraper:
                 # Results in dictionary format case
                 if type(self.results[0]) == dict:
                     # Create dictionary writer
-                    writer = csv.DictWriter(csv_file, fieldnames=headers)
+                    writer = csv.DictWriter(csv_file, fieldnames=self.results[0].keys())
                     
                     # Write column names
                     writer.writeheader()
