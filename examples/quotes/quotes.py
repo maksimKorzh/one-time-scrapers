@@ -32,18 +32,18 @@ class QuotesScraper(Scraper):
             })
 
 # Create QuotesScraper instance
-quotes = QuotesScraper()
+scraper = QuotesScraper()
 
 # Run QuotesScraper
-quotes.run()
+scraper.run()
 
 # Pretty print results to console
-quotes.print_results()
+scraper.print_results()
 
 # Export extracted data to CSV file
-quotes.export_csv('./data/quotes.csv')
+scraper.export_csv('./data/quotes.csv')
 
 # Export extracted data to JSON file
-quotes.export_json('./data/quotes.json')
+scraper.export_json('./data/quotes.json')
 
 
