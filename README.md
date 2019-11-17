@@ -8,5 +8,5 @@ pip install requests, bs4, lxml, tabulate
 https://github.com/maksimKorzh/one-time-scrapers/blob/master/ots/example.py
 
 # Youtube tutorials
-one time scraper class: https://www.youtube.com/watch?v=tiC6JZkeiaI
-free proxy list: https://www.youtube.com/watch?v=AHoeziSYSgs
+  - one time scraper class: https://www.youtube.com/watch?v=tiC6JZkeiaI
+  - free proxy list: https://www.youtube.com/watch?v=AHoeziSYSgs
