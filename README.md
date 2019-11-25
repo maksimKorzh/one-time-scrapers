@@ -5,9 +5,9 @@ A bunch of scripts to scrape data from various sources
 pip install requests, bs4, lxml, tabulate
 
 # Youtube tutorials
-  - one time scraper series: https://www.youtube.com/watch?v=AHoeziSYSgs&list=PLLfIBXQeu3aZNnz7OGBBjzePyCRlk7O7G
+https://www.youtube.com/watch?v=AHoeziSYSgs&list=PLLfIBXQeu3aZNnz7OGBBjzePyCRlk7O7G
 
-# Scraped resources:
-/scrapers/proxy_scraper.py ( https://www.free-proxy-list.net/ )
-/scrapers/hacker_news_scraper.py ( https://thehackernews.com/ )
-/scrapers/bulbs_scraper.py (https://www.lightup.com/standard-household-lighting.html )
+# Available scrapers:
+ - /scrapers/proxy_scraper.py ( https://www.free-proxy-list.net/ )
+ - /scrapers/hacker_news_scraper.py ( https://thehackernews.com/ )
+ - /scrapers/bulbs_scraper.py (https://www.lightup.com/standard-household-lighting.html )
