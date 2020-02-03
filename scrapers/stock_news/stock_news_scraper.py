@@ -10,7 +10,7 @@ class StockNewsScraper(Onetimescraper):
         articles = []
         
         for link in links:
-            res = requests.get(link)
+            res = self.fetch(link)
             article_content = BeautifulSoup(res.text, 'lxml')
             article_body = ''.join([line.text for line in article_content.find('div', {'class': 'entry-content'}).find_all('p')])
             articles.append(article_body)
