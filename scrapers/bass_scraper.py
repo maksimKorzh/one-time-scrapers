@@ -56,7 +56,7 @@ class BassScraper:
             res.write(html)
     
     def to_csv(self):
-        with open('./GUEST/basses.csv', 'w') as csv_file:
+        with open('basses.csv', 'w') as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=self.results[0].keys())
             writer.writeheader()
         
@@ -99,9 +99,9 @@ class BassScraper:
         self.to_csv()
 
 scraper = BassScraper()
-#scraper.run()
+scraper.run()
 #scraper.list_files()
-scraper.view_file('.codelog')
+#scraper.view_file('.codelog')
 
 
 
