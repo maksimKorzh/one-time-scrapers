@@ -18,3 +18,4 @@ https://www.youtube.com/watch?v=AHoeziSYSgs&list=PLLfIBXQeu3aZNnz7OGBBjzePyCRlk7
  - /scrapers/zoopla_scraper.py ( https://zoopla.co.uk )
  - /scrapers/bass_scraper.py ( https://https://www.thebassplace.com/ )
  - /scrapers/stock_news/stock_news_scraper.py ( http://www.stockpricetoday.com/stock-news/ )
+ - /scrapers/pinterest/pinterest_scraper.py ( https://pinterest.com )
