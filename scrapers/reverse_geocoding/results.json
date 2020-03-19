@@ -1,0 +1,93 @@
+[
+  {
+    "place_id": 140099602,
+    "osm_type": "way",
+    "osm_id": 224429430,
+    "type": "primary",
+    "accuracy": 0,
+    "label": "Welling High Street, Crook Log, Welling, London Borough of Bexley, London, Greater London, England, DA16 1TY, United Kingdom",
+    "name": "Welling High Street",
+    "street": "Welling High Street",
+    "postcode": "DA16 1TY",
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "admin": {
+      "level4": "England",
+      "level5": "Greater London",
+      "level6": "London",
+      "level8": "London Borough of Bexley"
+    },
+    "lat": "51.4624087",
+    "lon": "0.1079432"
+  },
+  {
+    "place_id": 149281916,
+    "osm_type": "way",
+    "osm_id": 258467909,
+    "type": "residential",
+    "accuracy": 0,
+    "label": "Victoria Homes, 54-64, Bourne Road, Bexley, London Borough of Bexley, London, Greater London, England, DA5 1LW, United Kingdom",
+    "name": "Victoria Homes",
+    "housenumber": "54-64",
+    "street": "Bourne Road",
+    "postcode": "DA5 1LW",
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "admin": {
+      "level4": "England",
+      "level5": "Greater London",
+      "level6": "London",
+      "level8": "London Borough of Bexley"
+    },
+    "lat": "51.4437673",
+    "lon": "0.1516269"
+  },
+  {
+    "place_id": 121439024,
+    "osm_type": "way",
+    "osm_id": 148693752,
+    "type": "clothes",
+    "accuracy": 0,
+    "label": "Glamorous, 83, Mortimer Street, Cavendish Square & Oxford Market (South), Fitzrovia, City of Westminster, London, Greater London, England, W1, United Kingdom",
+    "name": "Glamorous",
+    "housenumber": "83",
+    "street": "Mortimer Street",
+    "postcode": "W1",
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "admin": {
+      "level4": "England",
+      "level5": "Greater London",
+      "level6": "London",
+      "level8": "City of Westminster"
+    },
+    "lat": "51.517568749999995",
+    "lon": "-0.1411598575972799"
+  },
+  {
+    "place_id": 159616798,
+    "osm_type": "way",
+    "osm_id": 305302890,
+    "type": "residential",
+    "accuracy": 0,
+    "label": "Unex Tower, 7, Station Street, Stratford Marsh, London Borough of Newham, London, Greater London, England, E15 1DA, United Kingdom",
+    "name": "Unex Tower",
+    "housenumber": "7",
+    "street": "Station Street",
+    "postcode": "E15 1DA",
+    "city": "London",
+    "state": "England",
+    "country": "United Kingdom",
+    "admin": {
+      "level4": "England",
+      "level5": "Greater London",
+      "level6": "London",
+      "level8": "London Borough of Newham"
+    },
+    "lat": "51.540082299999995",
+    "lon": "-0.00149577689848307"
+  }
+]
