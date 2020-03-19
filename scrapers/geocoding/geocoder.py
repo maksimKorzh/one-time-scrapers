@@ -12,13 +12,19 @@ class Geocoder:
     results = []
 
     def fetch(self, address):
+        # headers
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+        }
+        
         # string query parameters
         params = {
             'q': address,
             'format': 'geocodejson'
         }
         
-        res = requests.get(url=self.base_url, params=params)
+        # make HTTP GET request to Nominatim API
+        res = requests.get(url=self.base_url, params=params, headers=headers)
         print('HTTP GET request to URL: %s | Status code: %s' % (res.url, res.status_code))
         
         if res.status_code == 200:
