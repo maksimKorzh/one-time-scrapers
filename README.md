@@ -21,3 +21,4 @@ https://www.youtube.com/watch?v=AHoeziSYSgs&list=PLLfIBXQeu3aZNnz7OGBBjzePyCRlk7
  - /scrapers/pinterest/pinterest_scraper.py ( https://pinterest.com )
  - /scrapers/geocoding/geocoder.py ( https://nominatim.openstreetmap.org/ )
  - /scrapers/reverse_geocoding/reverse_geocoding.py ( https://nominatim.openstreetmap.org/ )
+ - /scrapers/contact/contact.py ( extract contacts from different sites using regex )
