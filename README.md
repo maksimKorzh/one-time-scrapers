@@ -5,4 +5,4 @@ A bunch of scripts to scrape data from various sources
 pip install requests, bs4, lxml, tabulate
 
 # Youtube tutorials
-https://www.youtube.com/watch?v=AHoeziSYSgs&list=PLLfIBXQeu3aZNnz7OGBBjzePyCRlk7O7G
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/AHoeziSYSgs/0.jpg)](https://www.youtube.com/watch?v=AHoeziSYSgs&list=PLLfIBXQeu3aZNnz7OGBBjzePyCRlk7O7G)
