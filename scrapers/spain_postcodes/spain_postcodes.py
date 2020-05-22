@@ -43,6 +43,15 @@ for item in items:
         if ' through ' not in item and 'to' not in item:
             postcodes.append(item)
         
+        if ' through ' in item:
+            # extract "to" range
+            from_range = int(item.split(' through ')[0])
+            to_range = int(item.split(' through ')[1])
+            
+            # loop over "to" range
+            for postcode in range(from_range, to_range + 1):
+                postcodes.append(postcode)
+        
         if 'to' in item:
             # extract "to" range
             from_range = int(item.split(' to ')[0])
