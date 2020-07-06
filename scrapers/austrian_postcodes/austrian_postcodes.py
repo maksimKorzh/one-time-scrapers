@@ -23,7 +23,7 @@ content = BeautifulSoup(response.text, 'lxml')
 
 # extract and filter postcodes
 postcodes = [postcode.split()[0] for postcode in content.find_all('li')
-             if '-' in postcode.text and len(postcode.split()) in [3, 4]
+             if '-' in postcode.text and len(postcode.split()) in [3, 4]]
         
 
 # write output to file
