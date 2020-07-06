@@ -5,16 +5,8 @@ import re
 import json
 import csv
 
-# website URL links
-urls = ''
-
-# load website URLs
-with open('websites.txt', 'r') as f:
-    for line in f.read():
-        urls += line
-
-# convert string to list of URLs
-urls = list(filter(None, urls.split('\n')))
+# read the website links from the websites.txt and put it into a list
+urls = open('websites.txt').readlines()
 
 # loop over URLs
 for url in urls:
