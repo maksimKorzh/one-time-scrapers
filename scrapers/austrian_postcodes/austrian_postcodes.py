@@ -21,24 +21,14 @@ response = requests.get(url)
 # parse content
 content = BeautifulSoup(response.text, 'lxml')
 
-# extract postal codes
-postcodes = [
-                postcode.text for postcode in content.find_all('li')
-                if ' - ' in postcode.text
-            ]
-
-# filter postal codes
-postcodes = [
-                postcode.split()[0] for postcode in postcodes 
-                if len(postcode.split()) == 3 or
-                len(postcode.split()) == 4
-            ]
+# extract and filter postcodes
+postcodes = [postcode.split()[0] for postcode in content.find_all('li')
+             if '-' in postcode.text and len(postcode.split()) in [3, 4]
+        
 
 # write output to file
 with open('austrian_postcodes.txt', 'a') as f:
-    # loop over list of extracted postal codes
-    for postcode in postcodes:
-        f.write(postcode + '\n')
+    f.write('\n'.join(postcodecs))
     
     
     
