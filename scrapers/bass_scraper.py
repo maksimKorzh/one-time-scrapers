@@ -85,17 +85,12 @@ class BassScraper:
     
     def run(self):
         url = 'https://www.thebassplace.com/product-category/basses/4-string/'
-        
+
         for index in range(1, 4):
-            if index == 1:
-                next_page = url
-            
-            else:
-                next_page = url + 'page/' + str(index) + '/'
-        
+            next_page = url if index == 1 else url + 'page/' + str(index) + '/'
             res = self.fetch(next_page)
             self.parse(res.text)
-        
+
         self.to_csv()
 
 scraper = BassScraper()

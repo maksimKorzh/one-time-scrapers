@@ -50,16 +50,16 @@ class MovieScraper:
         
         # Parse content
         content = BeautifulSoup(html, 'lxml')
-        
+
         # Extract data
         title = [title.find('span', {'class': 'red'}).text for title in content.findAll('div', {'class': 'top-block'})]
         description = ['\n'.join([item.text for item in descr.findAll('div', {'data-role': 'links'})]) for descr in content.findAll('div', {'class': 'middle-block'})]
-        
+
         # Loop over entries' indexes
-        for index in range(0, len(title)):
+        for index in range(len(title)):
             # Extract genre
             genre = description[index].split('\n')[1]
-            
+
             # Pick up only kungfu movies
             if 'martial arts' in genre:
                 if description[index].split('\n')[5] == '':
@@ -68,7 +68,7 @@ class MovieScraper:
                 else:
                     director = description[index].split('\n')[3]
                     starring = description[index].split('\n')[5]
-                
+
                 # Init scraped item
                 item = {
                     'title': title[index],
@@ -77,10 +77,10 @@ class MovieScraper:
                     'director': director,
                     'starring': starring,
                 }
-                
+
                 # Write scraped item to CSV file
                 self.to_csv(item)
-            
+
             # Skip non-kungfu movies
             else:
                 continue

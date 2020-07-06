@@ -19,7 +19,7 @@ import time
 # Parse HTTP response
 def parse(response):
     print('HTTP GET: %s | Status code: %s' % (response.url, response.status_code))
-    
+
     # Parse HTML document
     content = BeautifulSoup(response.text, 'lxml')
 
@@ -38,7 +38,7 @@ def parse(response):
     extras = [''.join([extra.text for extra in feature if 'Features:' in extra.text]).split(':')[-1].strip() for feature in features]
 
     # Loop over the index range scraped items
-    for index in range(0, len(titles)):
+    for index in range(len(titles)):
         # Append scraped item to results list
         results.append({
             'Title': titles[index],

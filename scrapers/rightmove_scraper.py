@@ -15,7 +15,7 @@ class RightmoveScraper:
     
     def parse(self, html):
         content = BeautifulSoup(html, 'lxml')
-        
+
         titles = [title.text.strip() for title in content.findAll('h2', {'class': 'propertyCard-title'})]
         addresses = [address['content'] for address in content.findAll('meta', {'itemprop': 'streetAddress'})]
         descriptions = [description.text for description in content.findAll('span', {'data-test': 'property-description'})]
@@ -23,8 +23,8 @@ class RightmoveScraper:
         dates = [date.text.split(' ')[-1] for date in content.findAll('span', {'class': 'propertyCard-branchSummary-addedOrReduced'})]
         sellers = [seller.text.split('by')[-1].strip() for seller in content.findAll('span', {'class': 'propertyCard-branchSummary-branchName'})]
         images = [image['src'] for image in content.findAll('img', {'itemprop': 'image'})]
-        
-        for index in range(0, len(titles)):
+
+        for index in range(len(titles)):
             self.results.append({
                 'title': titles[index],
                 'address': addresses[index],
@@ -46,10 +46,10 @@ class RightmoveScraper:
             print('Stored results to "rightmove.csv"')
     
     def run(self):
-        for page in range(0, 5):
+        for page in range(5):
             index = page * 24
             url = 'https://www.rightmove.co.uk/property-for-sale/find.html?locationIdentifier=REGION%5E93917&index=' + str(index) + '&propertyTypes=&mustHave=&dontShow=&furnishTypes=&keywords='
-            
+
             response = self.fetch(url)
             self.parse(response.text)
 

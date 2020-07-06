@@ -3,19 +3,19 @@ from ots import *
 class StockNewsScraper(Onetimescraper):
     def parse(self, html):
         content = BeautifulSoup(html, 'lxml')
-        
+
         titles = [title.text for title in content.find_all('h2', {'class': 'entry-title'})]
         links = [link.find('a')['href'] for link in content.find_all('h2', {'class': 'entry-title'})]
         dates = [date.text for date in content.find_all('span', {'class': 'meta-date'})]
         articles = []
-        
+
         for link in links:
             res = self.fetch(link)
             article_content = BeautifulSoup(res.text, 'lxml')
             article_body = ''.join([line.text for line in article_content.find('div', {'class': 'entry-content'}).find_all('p')])
             articles.append(article_body)
-        
-        for index in range(0, len(titles)):
+
+        for index in range(len(titles)):
             self.results.append({
             	'title': titles[index],
                 'links': links[index],

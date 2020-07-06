@@ -82,14 +82,14 @@ class GoogleScraper:
         
         # Parse content
         content = BeautifulSoup(html, 'lxml')
-        
+
         # Extract data
         title = [title.text for title in content.findAll('span', {'class': 'S3Uucc'})]
         link = [link.next_element['href'] for link in content.findAll('div', {'class': 'r'})]
         description = [descr.text for descr in content.findAll('span', {'class': 'st'})]
-        
+
         # Loop over the number of entries
-        for index in range(0, len(title)):
+        for index in range(len(title)):
             # Append extracted data to results list
             self.results.append({
                 'title': title[index],
@@ -149,16 +149,16 @@ class GoogleScraper:
         '''Starts crawler'''
         
         # Loop over the range of pages to scrape
-        for page in range(0, 5):
+        for page in range(5):
             # Make HTTP GET request
             response = self.fetch('linux mint', page)
-            
+
             # Parse content
             self.parse(response.text)
-            
+
             # Wait for 5 sec            
             time.sleep(5)
-        
+
         # Write scraped results to CSV file
         self.write_csv()
 

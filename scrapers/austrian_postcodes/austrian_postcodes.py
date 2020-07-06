@@ -29,10 +29,11 @@ postcodes = [
 
 # filter postal codes
 postcodes = [
-                postcode.split()[0] for postcode in postcodes 
-                if len(postcode.split()) == 3 or
-                len(postcode.split()) == 4
-            ]
+    postcode.split()[0]
+    for postcode in postcodes
+    if len(postcode.split()) in [3, 4]
+]
+
 
 # write output to file
 with open('austrian_postcodes.txt', 'a') as f:
